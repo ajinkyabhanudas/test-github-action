@@ -1,0 +1,15 @@
+name: simple action
+
+on: [push]
+
+jobs:
+    run-github-actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: simple js action
+              id: task1
+              uses: actions/hello-world-javascript-action@v1
+              with: #provide input with "with"
+                who-to-greet: Not me
+            - name: pick output of simple js
+              run: echo "${{steps.task1.outputs.time}}"
