@@ -11,3 +11,9 @@ jobs:
 
             - name: step2
               run: ls
+
+            - name: lets add python
+              run: |
+                  import platform
+                  print(platform.processor())
+              shell: python
