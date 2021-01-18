@@ -17,3 +17,13 @@ jobs:
                   import platform
                   print(platform.processor())
               shell: python
+
+    task2:
+        runs-on: windows-latest
+        steps:
+            - name: directory pw shell
+              run: Get-Location
+
+            - name: directory bash 
+              run: pwd
+              shell: bash
