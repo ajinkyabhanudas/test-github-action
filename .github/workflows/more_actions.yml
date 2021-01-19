@@ -1,7 +1,7 @@
 name: actions on branches
 
 on: 
-  push:
+  pull:
       branches: #branches-ignore ignores the listed branches
         - 'dev/*' #pattern matching ** for even /
       #tags: ; paths: can also be used and it'll find it within the repo

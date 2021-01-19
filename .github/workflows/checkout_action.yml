@@ -1,6 +1,6 @@
 name: listing files and getting the present working directory
 
-on: [push]
+on: [pull]
 
 jobs:
     
