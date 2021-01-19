@@ -8,8 +8,8 @@ jobs:
             runs-on: ubuntu-latest
             steps:
                   - name: clone_repo_runner
-                    uses: action/checkout@v1
-                    
+                    uses: actions/checkout@v1
+
                   - name: listing_files post checkout
                     run: |
                         pwd
