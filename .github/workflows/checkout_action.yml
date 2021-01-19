@@ -13,4 +13,4 @@ jobs:
                   - name: listing_files post checkout
                     run: |
                         pwd
-                        ls
+                        ls -a
