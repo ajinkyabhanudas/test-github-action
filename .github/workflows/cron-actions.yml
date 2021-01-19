@@ -1,10 +1,10 @@
 name: Cron schedule
 
 on: 
-    schedule:
-      - cron: "0/5 * * * *" #use crontab guru 1,2 within* or 1-3 or 0/15(steps)... NOTE: time in UTC
-       #minimum workflow time is 5mins not less
-    # push:
+    # schedule:
+    #   - cron: "0/5 * * * *" #use crontab guru 1,2 within* or 1-3 or 0/15(steps)... NOTE: time in UTC
+    #    #minimum workflow time is 5mins not less
+    # # push:
     pull_request:
             types: [closed, opened,
                     reopened, assigned]
