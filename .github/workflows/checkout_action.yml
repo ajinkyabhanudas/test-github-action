@@ -3,10 +3,14 @@ name: listing files and getting the present working directory
 on: [push]
 
 jobs:
+    
     listing_directory:
             runs-on: ubuntu-latest
             steps:
-                  - name: listing_dir
+                  - name: clone_repo_runner
+                    uses: action/checkout@v1
+                    
+                  - name: listing_files post checkout
                     run: |
                         pwd
                         ls
