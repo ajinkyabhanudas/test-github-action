@@ -2,7 +2,7 @@ name: Env variables
 
 on: push
 env:
-  WF_ENV: ${{secrets.WF_ENV}}
+  WF_ENV: ${{secrets.WF_ENV}} #.GITHUB_TOKEN is by default generated if we want to use the github API
 
 
 jobs:

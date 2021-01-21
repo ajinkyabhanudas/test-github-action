@@ -1,0 +1,27 @@
+name: Push from runner VM
+
+on:
+  push:
+
+jobs:
+    vm_to_repo:
+              runs-on: ubuntu-latest
+              steps:
+                  - name: random file push
+                    run: |
+                        pwd
+                        ls -a
+                        git init 
+                        git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+                        git config --global user.email "test@testmail.com"
+                        git config --global user.name "test"
+                        git fetch
+                        git checkout dev/experiment
+                        git branch --set-upstream-to=origin/dev/experiment
+                        git pull_request
+                        ls -a
+                        echo $RANDOM >> random.txt
+                        git add -a
+                        git commit -m"random no file"
+                        git push
+
