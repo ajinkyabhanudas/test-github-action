@@ -18,7 +18,7 @@ jobs:
                         git fetch
                         git checkout dev/experiment
                         git branch --set-upstream-to=origin/dev/experiment
-                        git pull_request
+                        git pull
                         ls -a
                         echo $RANDOM >> random.txt
                         git add -a
