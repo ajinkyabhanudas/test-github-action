@@ -1,7 +1,8 @@
 name: Push from runner VM
 
 on:
-  push:
+  pull_request: 
+    types: [reopened]
 
 jobs:
     vm_to_repo:
